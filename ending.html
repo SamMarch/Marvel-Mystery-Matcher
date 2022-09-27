@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marvel Mystery Matcher</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body class="is-family-monospace">
+    <!-- this is the navbar element -->
+    <nav
+      class="navbar has-background-dark p-2 has-text-weight-semibold is-transparent"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <div class="navbar-item has-text-white is-size-3">
+          Marvel Mystery Matcher
+        </div>
+        <!-- this is the burger menu elements -->
+        <a
+          role="button"
+          class="navbar-burger has-background-dark is-transparent has-text-white"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-menu has-background-dark is-transparent">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a
+              class="navbar-item has-text-white has-background-dark is-size-4"
+              href="./index.html"
+            >
+              Home
+            </a>
+            <a
+              class="navbar-item has-text-white has-background-dark is-size-4"
+              href="./about.html"
+            >
+              About
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- this is the banner -->
+    <figure class="image">
+      <img
+        src="./assets/images/marvel-fresh-start-banner.jpeg"
+        alt="Marvel characters"
+      />
+    </figure>
+    <!-- this is the main section with a centered column  -->
+    <section class="section is-small mt-4">
+      <div class="columns is-mobile">
+        <div class="column is-12">
+          <div class="columns">
+            <!-- another column wihtin the column that holds the card with the result -->
+            <div class="column is-6 is-two-thirds-tablet">
+              <!-- image of the matched character -->
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img src="" alt="marvel character" id="characterImage" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="card">
+                <div class="card-content has-text-centered">
+                  <div class="content">
+                    <!-- result of the match -->
+                    <h1
+                      class="title has-text-centered has-text-danger-dark"
+                      id="character"
+                    ></h1>
+                    <!-- description of the character -->
+                    <p
+                      class="subtitle has-text-centered m-3"
+                      id="description"
+                    ></p>
+                  </div>
+                  <!-- this will redirect to the wikipedia page with the api fetch -->
+                  <a
+                    class="button is-link is-large is-danger is-rounded is-outlined m-3"
+                    href=""
+                    id="wiki-link"
+                    target="_blank"
+                  >
+                    Read More
+                  </a>
+                  <button
+                    class="js-modal-trigger button is-large is-danger is-rounded is-outlined m-3"
+                    id="modal-btn"
+                    data-target="modal-js-example"
+                  >
+                    Get Movie Info
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- this is the modal that will open up with the movie info fetch from omdb -->
+    <div class="modal" id="modal-movies">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p
+            class="modal-card-title has-text-centered is-size-3 has-text-danger-dark has-text-weight-semibold"
+            id="movie-title"
+          ></p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <p class="image is-square">
+            <img src="" alt="marvel movie" id="poster" />
+          </p>
+          <p class="is-size-4 has-text-left m-3 has-text-weight-semibold">
+            Actors/Actresses:
+            <span
+              class="is-size-4 has-text-left m-3 has-text-weight-light"
+              id="actors"
+            ></span>
+          </p>
+          <p class="is-size-4 has-text-left m-3 has-text-weight-semibold">
+            Awards:
+            <span
+              class="is-size-4 has-text-left m-3 has-text-weight-light"
+              id="awards"
+            ></span>
+          </p>
+          <p class="is-size-4 has-text-left m-3 has-text-weight-semibold">
+            Imdb ratings
+            <span
+              class="is-size-4 has-text-left has-text-weight-light m-3"
+              id="ratings"
+            ></span>
+          </p>
+        </section>
+      </div>
+    </div>
+    <script type="text/javascript" src="./assets/js/end.js"></script>
+  </body>
+</html>
